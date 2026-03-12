@@ -101,17 +101,10 @@ Claude should always orient itself through `/prime` at session start, then act w
 | `reference/seo/`      | SEO documentation, schema templates, and Python requirements.                       |
 | `scripts/`            | Any automation or tooling scripts.                                                  |
 | `scripts/seo/`        | SEO Python scripts: page fetching, HTML parsing, screenshots, visual analysis.      |
-| `.claude/skills/seo*`                  | SEO skill suite: 1 orchestrator + 12 sub-skills.                                    |
-| `.claude/skills/frontend-design/`      | Distinctive, creative frontend framework — triggers on artistic UI requests.          |
-| `.claude/skills/ui-ux-pro-max/`        | Main UI/UX orchestrator with design system generation engine.                       |
-| `.claude/skills/design-system/`        | Design system architecture, tokens, and component specs.                            |
-| `.claude/skills/brand/`                | Brand guideline creation and management with scripts.                               |
-| `.claude/skills/banner-design/`        | Banner and advertisement design.                                                    |
-| `.claude/skills/slides/`               | Presentation slide design.                                                          |
-| `.claude/skills/ui-styling/`           | UI styling patterns and best practices.                                             |
-| `.claude/skills/blog/`                 | Blog orchestrator — routes 12 commands, holds references and templates.             |
-| `.claude/skills/blog-*/`               | 13 blog sub-skills for writing, analysis, SEO, schema, repurposing.                 |
-| `.claude/skills/research-last30days/`  | Multi-source trend research skill + bundled Python scripts.                         |
+| `.claude/skills/seo/`                  | SEO skill suite: 1 orchestrator + 14 sub-skills.                                    |
+| `.claude/skills/design/`               | Design skills suite, including UI/UX Pro Max, brand, banner, and slides.            |
+| `.claude/skills/blog/`                 | Blog orchestrator + 13 blog sub-skills.                                             |
+| `.claude/skills/Misc/`                 | Miscellaneous skills (e.g. MCP integration, skill-creator, research).               |
 | `.claude/agents/`                      | Subagent configs for SEO audits (6) and blog production (4).                        |
 
 ---
