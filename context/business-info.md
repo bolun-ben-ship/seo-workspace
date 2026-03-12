@@ -13,11 +13,11 @@
 
 ## Organization Overview
 
-**Google Antigravity** — an AI dev shop being built for AI consultants.
+**RightClick:AI** — an AI dev shop being built for AI consultants.
 
 The business designs and implements AI operating systems: connecting a client's data, automating operational workflows, and eventually deploying an AI layer that gives founders real-time visibility and strategic intelligence across their entire business — so they stop being the bottleneck.
 
-The current pivot is from "SME service businesses broadly" → **AI consultants specifically** as the primary client. The belief: AI consultants already understand the value of AI systems, have technically sophisticated clients, and are better positioned to buy and deploy what Google Antigravity builds.
+The current pivot is from "SME service businesses broadly" → **AI consultants specifically** as the primary client. The belief: AI consultants already understand the value of AI systems, have technically sophisticated clients, and are better positioned to buy and deploy what RightClick:AI builds.
 
 ## Products / Services / Focus Areas
 
@@ -47,14 +47,14 @@ The current pivot is from "SME service businesses broadly" → **AI consultants 
 **Ideal client profile:**
 - Founder-led, 5–50 person service business
 - Operationally scattered (data in WhatsApp, spreadsheets, multiple platforms)
-- Founder is the decision bottleneck
+- Founder or the chief operator is the decision bottleneck
 - Has grown to a point where adding headcount isn't solving the coordination problem
 - Thinks empirically, values data, wants clarity over noise
 
 **Not ideal:**
 - Businesses wanting a quick "copy-paste" automation fix
-- Decision makers who aren't the actual owner
 - Tool-first thinkers looking for a tech vendor, not a strategic partner
+- Decision makers who do not understand AI technology, process thinking or do not value data
 
 ## Key Method / IP
 

@@ -1,7 +1,6 @@
 ---
 name: frontend-design
-description: Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
-license: Complete terms in LICENSE.txt
+description: Create distinctive, bold, creative frontend interfaces with highly unique aesthetics. Use this skill when the user wants MEMORABLE, ARTISTIC, or EXPERIMENTAL UI design that breaks conventions. For structured, industry-aligned, design-system-driven generation, use ui-ux-pro-max instead. Generates creative, polished code that avoids generic AI aesthetics.
 ---
 
 This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.

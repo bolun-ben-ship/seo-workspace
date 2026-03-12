@@ -83,12 +83,48 @@ Load from `assets/` directory:
 
 ## Output
 
-### Deliverables
-- `SEO-STRATEGY.md` — Complete strategic plan
-- `COMPETITOR-ANALYSIS.md` — Competitive insights
-- `CONTENT-CALENDAR.md` — Content roadmap
-- `IMPLEMENTATION-ROADMAP.md` — Phased action plan
-- `SITE-STRUCTURE.md` — URL hierarchy and architecture
+Save everything to a single file:
+
+```
+outputs/seo/<domain>/IMPLEMENTATION-PLAN.md
+```
+
+## Report Structure
+
+All sections below are written into the single `IMPLEMENTATION-PLAN.md` file in this order.
+
+### Executive Summary
+- One sentence referencing the audit: "A full site audit (AUDIT.md) identified N critical issues; this plan defines how to address them." Do NOT restate the health score or issue list.
+- Business type, target audience, key goals
+- Top 3 growth opportunities (forward-looking, not audit issues)
+- Phased timeline overview
+
+> **Scope boundary:** This summary is forward-looking (what we will do). It does NOT restate audit findings, health scores, or issue lists — those live in AUDIT.md.
+
+### Competitive Analysis
+- Top 5 competitors with keyword and content strategy summary
+- Content gaps vs competitors
+- E-E-A-T signal comparison — competitor benchmarking only: how do competitors demonstrate E-E-A-T that the site does not? Output a gap table. Do NOT re-score the site's own E-E-A-T signals — reference AUDIT.md for that.
+
+### Site Structure
+- URL hierarchy and content pillars
+- Internal linking strategy
+- Sitemap outline with quality gates
+
+### Content Strategy
+- Page types and estimated counts
+- Blog/resource topics and publishing cadence
+- E-E-A-T building plan (author bios, credentials, experience signals)
+
+### Implementation Roadmap
+- References AUDIT.md findings by name but does NOT re-list individual issues
+- Groups tasks by phase with sequencing rationale, dependencies, resource requirements
+- Phase 1 — Foundation (weeks 1-4): tasks, owners, success metrics
+- Phase 2 — Expansion (weeks 5-12): tasks, owners, success metrics
+- Phase 3 — Scale (months 4-6): tasks, owners, success metrics
+- Phase 4 — Authority (months 7-12): tasks, owners, success metrics
+
+> **Scope boundary:** This roadmap defines WHEN and HOW to execute, in phases. It does NOT re-list what is broken (that is the Action Plan in AUDIT.md). Reference the audit for the issue list; this section adds sequencing, phasing logic, and milestone targets.
 
 ### KPI Targets
 | Metric | Baseline | 3 Month | 6 Month | 12 Month |
@@ -99,8 +135,6 @@ Load from `assets/` directory:
 | Indexed Pages | ... | ... | ... | ... |
 | Core Web Vitals | ... | ... | ... | ... |
 
-### Success Criteria
-- Clear, measurable goals per phase
-- Resource requirements defined
-- Dependencies identified
-- Risk mitigation strategies
+### Content Calendar
+- Monthly publishing plan with topics, target keywords, and content types
+- Seasonal and event-based content opportunities

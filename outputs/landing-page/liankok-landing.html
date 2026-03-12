@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lian Kok Electrical — ABB Authorised Distributor Singapore Since 1975</title>
+    <meta name="description" content="Singapore's ABB electrical distributor since 1975. Miniature circuit breakers, contactors, RCDs. 50 years of industrial precision. Race Course Road showroom.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+        :root {
+            --concrete: #1a1a1a;
+            --steel: #2a2a2a;
+            --zinc: #505050;
+            --electric: #FFD600;
+            --white: #f5f5f5;
+            --grid: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            background: var(--concrete);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Technical grid overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image:
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+                linear-gradient(180deg, var(--grid) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            padding: 40px 0;
+            border-bottom: 3px solid var(--electric);
+            position: relative;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--electric);
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .est {
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--zinc);
+            margin-left: 12px;
+            letter-spacing: 2px;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 120px 0 160px;
+            position: relative;
+        }
+
+        .year-badge {
+            position: absolute;
+            top: -20px;
+            right: 60px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 180px;
+            font-weight: 900;
+            color: var(--steel);
+            line-height: 1;
+            letter-spacing: -8px;
+            user-select: none;
+            opacity: 0.5;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            font-size: 72px;
+            font-weight: 900;
+            line-height: 1.1;
+            max-width: 900px;
+            margin-bottom: 32px;
+            position: relative;
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 .highlight {
+            color: var(--electric);
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+            color: var(--zinc);
+            max-width: 700px;
+            margin-bottom: 48px;
+            animation: slideUp 0.8s 0.1s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            animation: slideUp 0.8s 0.2s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+        }
+
+        .btn {
+            font-family: 'JetBrains Mono', monospace;
+            padding: 20px 40px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--electric);
+            color: var(--concrete);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: -1;
+        }
+
+        .btn-primary:hover::before {
+            left: 0;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--zinc);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--electric);
+            color: var(--electric);
+        }
+
+        /* Credentials strip */
+        .credentials {
+            background: var(--steel);
+            padding: 60px 0;
+            margin: 80px 0;
+            border-left: 6px solid var(--electric);
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        .credential-item {
+            position: relative;
+        }
+
+        .credential-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--zinc);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .credential-value {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--electric);
+            line-height: 1.2;
+        }
+
+        .credential-detail {
+            font-size: 15px;
+            color: var(--white);
+            margin-top: 8px;
+        }
+
+        /* Products section */
+        .products {
+            padding: 120px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 80px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--zinc);
+        }
+
+        .section-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 48px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .section-note {
+            font-size: 14px;
+            color: var(--zinc);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .product-card {
+            background: var(--steel);
+            padding: 32px;
+            border-left: 3px solid transparent;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 24px;
+            filter: brightness(0.9) contrast(1.1);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-card:hover {
+            border-left-color: var(--electric);
+            transform: translateX(8px);
+        }
+
+        .product-code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--zinc);
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .product-name {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--white);
+        }
+
+        .product-desc {
+            font-size: 14px;
+            color: var(--zinc);
+            line-height: 1.6;
+        }
+
+        /* Timeline */
+        .timeline {
+            background: linear-gradient(135deg, var(--steel) 0%, var(--concrete) 100%);
+            padding: 120px 0;
+            margin: 80px 0;
+        }
+
+        .timeline-title {
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--electric);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            grid-column: 2;
+        }
+
+        .timeline-item:nth-child(even) .timeline-year {
+            grid-column: 1;
+            text-align: right;
+        }
+
+        .timeline-year {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 64px;
+            font-weight: 900;
+            color: var(--electric);
+            line-height: 1;
+        }
+
+        .timeline-content h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-content p {
+            color: var(--zinc);
+            font-size: 15px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 32px;
+            width: 20px;
+            height: 20px;
+            background: var(--electric);
+            border: 4px solid var(--concrete);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 4px var(--steel);
+        }
+
+        /* Contact CTA */
+        .contact-cta {
+            background: var(--electric);
+            color: var(--concrete);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .contact-cta h2 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 24px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 48px;
+        }
+
+        .contact-item {
+            text-align: left;
+        }
+
+        .contact-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 8px;
+        }
+
+        .contact-value {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--concrete);
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--zinc);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--zinc);
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .year-badge {
+                font-size: 120px;
+                right: 32px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .credentials-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-year {
+                grid-column: 1;
+                text-align: left;
+            }
+
+            .timeline-line {
+                left: 0;
+            }
+
+            .timeline-dot {
+                left: 0;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                gap: 32px;
+                align-items: center;
+            }
+
+            .contact-item {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://liankok.com/wp-content/uploads/2024/08/Icon.png" alt="Lian Kok Electrical Logo" class="logo-img">
+                LIAN KOK
+                <span class="est">EST. 1975</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="year-badge">50</div>
+            <h1>
+                Singapore's <span class="highlight">ABB Authorised</span> Electrical Distributor
+            </h1>
+            <p class="hero-subtitle">
+                Five decades of industrial precision. Official ABB partner since 1991. Circuit breakers, contactors, RCDs — engineered for Singapore's electrical infrastructure.
+            </p>
+            <div class="cta-group">
+                <button class="btn btn-primary">View Product Catalogue</button>
+                <button class="btn btn-secondary">Visit Race Course Road</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="credentials">
+        <div class="container">
+            <div class="credentials-grid">
+                <div class="credential-item">
+                    <div class="credential-label">Established</div>
+                    <div class="credential-value">1975</div>
+                    <div class="credential-detail">50 years serving Singapore</div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-label">ABB Partnership</div>
+                    <div class="credential-value">Since 1991</div>
+                    <div class="credential-detail">Exclusive authorised distributor</div>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-label">Location</div>
+                    <div class="credential-value">Race Course Rd</div>
+                    <div class="credential-detail">Physical counter + consultation</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Core Products</h2>
+                <span class="section-note">ABB Low Voltage Systems</span>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://liankok.com/wp-content/uploads/2024/08/Untitled-design-91.png" alt="ABB MCB" class="product-image">
+                    <div class="product-code">ABB-MCB-S200</div>
+                    <div class="product-name">Miniature Circuit Breakers</div>
+                    <p class="product-desc">S200 series MCBs. 6-63A. Type B/C curves. Singapore HDB-compatible.</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://liankok.com/wp-content/uploads/2024/09/Untitled-design-98.png" alt="ABB Contactors" class="product-image">
+                    <div class="product-code">ABB-CONT-AF</div>
+                    <div class="product-name">AF Contactors</div>
+                    <p class="product-desc">9A-400A contactors. 3-4 pole configurations. Industrial motor control.</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://liankok.com/wp-content/uploads/2024/09/Untitled-design-40.png" alt="ABB RCD" class="product-image">
+                    <div class="product-code">ABB-RCD-F200</div>
+                    <div class="product-name">Residual Current Devices</div>
+                    <p class="product-desc">F200 series RCCBs. 25-63A. 30mA sensitivity. Type AC/A.</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://liankok.com/wp-content/uploads/2024/09/Untitled-design-39.png" alt="ABB MCCB" class="product-image">
+                    <div class="product-code">ABB-MCCB-T</div>
+                    <div class="product-name">Moulded Case Circuit Breakers</div>
+                    <p class="product-desc">Tmax series. 16-1600A. Thermal-magnetic + electronic trip units.</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://liankok.com/wp-content/uploads/2024/09/Untitled-design-38.png" alt="ABB SPD" class="product-image">
+                    <div class="product-code">ABB-SPD-OVR</div>
+                    <div class="product-name">Surge Protection Devices</div>
+                    <p class="product-desc">OVR series SPDs. Type 1+2 combined. Lightning protection.</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://liankok.com/wp-content/uploads/2024/09/Untitled-design-37.png" alt="ABB Switch" class="product-image">
+                    <div class="product-code">ABB-SW-OT</div>
+                    <div class="product-name">Switch Disconnectors</div>
+                    <p class="product-desc">OT series. 16-125A. Rotary handle. Panel mounting.</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://liankok.com/wp-content/uploads/2024/09/Untitled-design-45.png" alt="ABB Relay" class="product-image">
+                    <div class="product-code">ABB-REL-CR</div>
+                    <div class="product-name">Control Relays</div>
+                    <p class="product-desc">CR-P series interface relays. 1-4 c/o contacts. 24-230V coils.</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://liankok.com/wp-content/uploads/2024/09/Untitled-design-44.png" alt="ABB Accessories" class="product-image">
+                    <div class="product-code">ABB-ACC-PS</div>
+                    <div class="product-name">Wiring Accessories</div>
+                    <p class="product-desc">Switches, sockets, distribution boards. Residential + commercial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <div class="container">
+            <h2 class="timeline-title">Built on Five Decades of Trust</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1975</div>
+                    <div class="timeline-content">
+                        <h3>Founded in Singapore</h3>
+                        <p>Lian Kok Electrical established as local electrical distributor serving contractors and engineers.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1991</div>
+                    <div class="timeline-content">
+                        <h3>ABB Authorised Partnership</h3>
+                        <p>Became official ABB authorised distributor — exclusive access to full low-voltage product range.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-content">
+                        <h3>Race Course Road Counter</h3>
+                        <p>Physical showroom and consultation counter opened for licensed electrical workers and consultants.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-content">
+                        <h3>50 Years of Engineering Precision</h3>
+                        <p>Continuing to serve Singapore's electrical infrastructure with industrial-grade ABB solutions.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Ready to Specify ABB Products?</h2>
+            <p style="font-size: 18px; margin-top: 16px; opacity: 0.8;">
+                Licensed electrical workers, M&E consultants, and contractors — walk in or call.
+            </p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value">+65 6293 3173</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Location</div>
+                    <div class="contact-value">Race Course Road, Singapore</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Hours</div>
+                    <div class="contact-value">Mon-Fri 9AM-6PM</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>&copy; 2026 Lian Kok Electrical. ABB Authorised Distributor since 1991.</div>
+                <div>Singapore Electrical Distributor Est. 1975</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

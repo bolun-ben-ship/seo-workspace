@@ -51,6 +51,7 @@ Claude should always orient itself through `/prime` at session start, then act w
 │   │   ├── seo-programmatic/  # Programmatic SEO
 │   │   ├── seo-competitor-pages/ # Competitor comparison pages
 │   │   ├── seo-hreflang/      # Hreflang/i18n SEO
+│   │   ├── seo-keywords/      # Keyword research & gap analysis (4 keyword tables)
 │   │   ├── frontend-design/   # Distinctive, production-grade UI generation
 │   │   ├── blog/              # Blog orchestrator (12 commands, 12 templates, 12 references)
 │   │   ├── blog-write/        # Write new blog posts from scratch
@@ -101,7 +102,13 @@ Claude should always orient itself through `/prime` at session start, then act w
 | `scripts/`            | Any automation or tooling scripts.                                                  |
 | `scripts/seo/`        | SEO Python scripts: page fetching, HTML parsing, screenshots, visual analysis.      |
 | `.claude/skills/seo*`                  | SEO skill suite: 1 orchestrator + 12 sub-skills.                                    |
-| `.claude/skills/frontend-design/`      | Frontend design skill — triggers on UI/frontend build requests.                     |
+| `.claude/skills/frontend-design/`      | Distinctive, creative frontend framework — triggers on artistic UI requests.          |
+| `.claude/skills/ui-ux-pro-max/`        | Main UI/UX orchestrator with design system generation engine.                       |
+| `.claude/skills/design-system/`        | Design system architecture, tokens, and component specs.                            |
+| `.claude/skills/brand/`                | Brand guideline creation and management with scripts.                               |
+| `.claude/skills/banner-design/`        | Banner and advertisement design.                                                    |
+| `.claude/skills/slides/`               | Presentation slide design.                                                          |
+| `.claude/skills/ui-styling/`           | UI styling patterns and best practices.                                             |
 | `.claude/skills/blog/`                 | Blog orchestrator — routes 12 commands, holds references and templates.             |
 | `.claude/skills/blog-*/`               | 13 blog sub-skills for writing, analysis, SEO, schema, repurposing.                 |
 | `.claude/skills/research-last30days/`  | Multi-source trend research skill + bundled Python scripts.                         |
@@ -141,7 +148,7 @@ Example: `/implement plans/2026-01-28-competitor-analysis-command.md`
 
 ## SEO Skills
 
-This workspace includes a comprehensive **Claude SEO** skill suite (13 skills, 6 subagents) for full-spectrum SEO analysis. The main orchestrator is at `.claude/skills/seo/SKILL.md`.
+This workspace includes a comprehensive **Claude SEO** skill suite (14 skills, 6 subagents) for full-spectrum SEO analysis. The main orchestrator is at `.claude/skills/seo/SKILL.md`.
 
 ### SEO Commands
 
@@ -160,11 +167,12 @@ This workspace includes a comprehensive **Claude SEO** skill suite (13 skills, 6
 | `/seo programmatic <url>`     | Programmatic SEO analysis and planning                             |
 | `/seo competitor-pages <url>` | Competitor comparison page generation                              |
 | `/seo hreflang <url>`         | Hreflang/i18n SEO audit and generation                             |
+| `/seo keywords <url>`         | Keyword research & gap analysis (primary, long-tail, PAA, AI search)   |
 
 ### SEO Architecture
 
 - **Orchestrator** (`seo/SKILL.md`): Routes commands, detects industry type, spawns subagents for full audits
-- **Sub-skills** (`seo-*/SKILL.md`): 12 specialized skills loaded on-demand
+- **Sub-skills** (`seo-*/SKILL.md`): 13 specialized skills loaded on-demand
 - **Subagents** (`.claude/agents/seo-*.md`): 6 parallel workers for audit delegation (technical, content, schema, sitemap, performance, visual)
 - **Reference files** (`seo/references/`): CWV thresholds, E-E-A-T framework, schema types, quality gates — loaded on-demand
 - **Scripts** (`scripts/seo/`): Python utilities for page fetching, HTML parsing, screenshots, visual analysis
@@ -200,6 +208,60 @@ Claude automatically uses this skill when asked to build frontend components, pa
 - "Create a dashboard for a music streaming app"
 - "Build a landing page for an AI security startup"
 - "Design a settings panel with dark mode"
+
+---
+
+## UI/UX Pro Max Skills
+
+This workspace includes the **UI/UX Pro Max** skill suite for comprehensive design intelligence. The suite consists of 7 specialized skills that provide structured, industry-optimized UI/UX generation with extensive databases of styles, colors, typography, and reasoning rules.
+
+### What It Does
+
+Generates production-ready UI/UX designs with:
+- **67 UI Styles**: Glassmorphism, Claymorphism, Minimalism, Brutalism, Neumorphism, Bento Grid, Dark Mode, and more
+- **161 Color Palettes**: Industry-specific palettes aligned with 161 product types
+- **57 Font Pairings**: Curated typography combinations with Google Fonts imports
+- **161 Reasoning Rules**: Automatic design system generation based on product type
+- **99 UX Guidelines**: Best practices, anti-patterns, and accessibility rules
+- **25 Chart Types**: Dashboard and analytics recommendations
+- **13 Tech Stacks**: React, Next.js, Astro, Vue, Nuxt.js, Nuxt UI, Svelte, SwiftUI, React Native, Flutter, HTML+Tailwind, shadcn/ui, Jetpack Compose
+
+### Skills in Suite
+
+| Skill | Description |
+| ----- | ----------- |
+| `ui-ux-pro-max` | Main orchestrator with design system generation engine |
+| `design-system` | Design system architecture, tokens, and component specs |
+| `design` | Core design principles and patterns |
+| `brand` | Brand guideline creation and management with scripts |
+| `banner-design` | Banner and advertisement design |
+| `slides` | Presentation slide design |
+| `ui-styling` | UI styling patterns and best practices |
+
+### Design System Generation
+
+The flagship feature is the **Design System Generator** - an AI-powered reasoning engine that:
+1. Analyzes project requirements and product type
+2. Searches 5 databases in parallel (styles, colors, fonts, patterns, reasoning rules)
+3. Applies industry-specific reasoning rules and filters anti-patterns
+4. Generates complete design system with pattern, style, colors, typography, effects, anti-patterns, and pre-delivery checklist
+
+### When to Use
+
+**Use `ui-ux-pro-max`** when you want:
+- Structured, industry-aligned design systems
+- Automatic style/color/typography recommendations based on product type
+- Multi-platform consistency (web, iOS, Android)
+- Design systems with tokens and component libraries
+- Landing pages with conversion-optimized patterns
+
+**Use `frontend-design`** when you want:
+- Bold, distinctive, memorable aesthetics
+- Creative, artistic, experimental UI design
+- Breaking conventions for maximum impact
+- Custom, one-of-a-kind visual identities
+
+Both skills can be used together: use `ui-ux-pro-max` for the design system foundation, then `frontend-design` for creative hero sections or distinctive components.
 
 ---
 

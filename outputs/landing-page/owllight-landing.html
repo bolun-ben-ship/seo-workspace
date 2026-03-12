@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owllight Sleep — Singapore's Back Care Mattress Brand</title>
+    <meta name="description" content="Orthopedic hybrid mattress engineered for back pain relief. CertiPUR-US certified. 100-night trial. Founded from personal back pain experience. Singapore mattress specialists.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+        :root {
+            --midnight: #1a1a2e;
+            --indigo: #2d2d5f;
+            --lavender: #8b7fc5;
+            --cream: #f9f6f1;
+            --peach: #ffd6ba;
+            --soft-shadow: rgba(45, 45, 95, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--midnight);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Dreamy gradient background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            right: -20%;
+            width: 100%;
+            height: 150%;
+            background: radial-gradient(ellipse at center, rgba(139, 127, 197, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            animation: drift 20s ease-in-out infinite;
+        }
+
+        @keyframes drift {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-10%, -5%) scale(1.1); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            padding: 32px 0;
+            position: relative;
+            backdrop-filter: blur(20px);
+            background: rgba(249, 246, 241, 0.7);
+            border-bottom: 1px solid rgba(139, 127, 197, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            font-style: italic;
+            color: var(--indigo);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--midnight);
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--lavender);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 140px 0 180px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(139, 127, 197, 0.1);
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--indigo);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 32px;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 84px;
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--midnight);
+            max-width: 900px;
+            margin: 0 auto 32px;
+            animation: fadeIn 1s 0.2s ease backwards;
+        }
+
+        .hero-tagline {
+            font-size: 24px;
+            color: var(--indigo);
+            max-width: 650px;
+            margin: 0 auto 48px;
+            font-weight: 400;
+            animation: fadeIn 1s 0.4s ease backwards;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            padding: 20px 48px;
+            background: var(--indigo);
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 60px;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 20px 40px var(--soft-shadow);
+            animation: fadeIn 1s 0.6s ease backwards;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px rgba(45, 45, 95, 0.25);
+            background: var(--lavender);
+        }
+
+        .hero-note {
+            font-size: 14px;
+            color: var(--indigo);
+            margin-top: 24px;
+            opacity: 0.7;
+        }
+
+        /* Trust badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 80px;
+            padding: 40px;
+            animation: fadeIn 1s 0.8s ease backwards;
+        }
+
+        .badge-item {
+            text-align: center;
+        }
+
+        .badge-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 16px;
+            background: rgba(139, 127, 197, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .badge-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--midnight);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Journey section */
+        .journey {
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--indigo) 100%);
+            color: var(--cream);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .journey::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 214, 186, 0.08) 0%, transparent 60%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+
+        .journey-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .journey h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            margin-bottom: 32px;
+            line-height: 1.2;
+        }
+
+        .journey-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            margin-top: 80px;
+        }
+
+        .journey-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--lavender);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--cream);
+        }
+
+        .step-desc {
+            font-size: 15px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Features */
+        .features {
+            padding: 140px 0;
+        }
+
+        .features-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 100px;
+        }
+
+        .features-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            margin-bottom: 24px;
+            color: var(--midnight);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 80px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 60px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px var(--soft-shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(45, 45, 95, 0.2);
+        }
+
+        .feature-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--indigo) 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin-bottom: 32px;
+            color: white;
+        }
+
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 16px;
+            color: var(--midnight);
+        }
+
+        .feature-card p {
+            color: var(--indigo);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* Testimonial */
+        .testimonial {
+            background: var(--peach);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .testimonial-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--midnight);
+            margin-bottom: 32px;
+        }
+
+        .author {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--indigo);
+        }
+
+        .rating {
+            margin-top: 24px;
+            font-size: 24px;
+            color: var(--indigo);
+        }
+
+        /* CTA section */
+        .final-cta {
+            padding: 140px 0;
+            text-align: center;
+            background: linear-gradient(180deg, var(--cream) 0%, rgba(139, 127, 197, 0.08) 100%);
+        }
+
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            margin-bottom: 32px;
+            color: var(--midnight);
+        }
+
+        .trial-badge {
+            display: inline-block;
+            padding: 12px 32px;
+            background: var(--lavender);
+            color: white;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 48px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--midnight);
+            color: var(--cream);
+            padding: 60px 0 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-style: italic;
+            color: var(--lavender);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--cream);
+            font-size: 14px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 56px;
+            }
+
+            .journey-steps,
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            .hero {
+                padding: 80px 0 100px;
+            }
+
+            .container {
+                padding: 0 24px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .feature-card {
+                padding: 40px 32px;
+            }
+
+            .quote {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Owllight</div>
+                <ul class="nav-links">
+                    <li><a href="#products">Mattresses</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#showroom">Showroom</a></li>
+                    <li><a href="#trial">100-Night Trial</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">Singapore's Back Care Specialists</div>
+            <h1>Sleep Without<br>Back Pain</h1>
+            <p class="hero-tagline">
+                Orthopedic hybrid mattress engineered for spinal alignment. Founded from personal back pain experience. CertiPUR-US certified.
+            </p>
+            <a href="#" class="cta-primary">Try Risk-Free for 100 Nights</a>
+            <p class="hero-note">Free delivery · Free returns · Singapore mattress specialists</p>
+
+            <div class="trust-badges">
+                <div class="badge-item">
+                    <div class="badge-icon">✓</div>
+                    <div class="badge-label">CertiPUR-US</div>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">🏆</div>
+                    <div class="badge-label">#1 on Lazada</div>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">🌙</div>
+                    <div class="badge-label">100-Night Trial</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="journey">
+        <div class="journey-content">
+            <h2>From Back Pain<br>to Deep Sleep</h2>
+            <p style="font-size: 18px; opacity: 0.9; margin-top: 16px;">
+                Founded by someone who suffered through years of chronic back pain. We built the mattress we wished existed.
+            </p>
+
+            <div class="journey-steps">
+                <div class="journey-step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Spinal Alignment</div>
+                    <p class="step-desc">4D Air Fiber technology supports natural spine curvature. Pressure relief at shoulders and hips.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Hybrid Comfort</div>
+                    <p class="step-desc">Pocket springs + memory foam. Responsive support without sinking. Cool airflow layers.</p>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Wake Rested</div>
+                    <p class="step-desc">Reduced tossing and turning. Deep, uninterrupted sleep. Morning back pain relief.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-header">
+                <h2>Engineered for Singapore Sleep</h2>
+                <p style="font-size: 18px; color: var(--indigo);">
+                    Every detail designed for tropical climate, HDB bed frames, and back pain relief.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛏️</div>
+                    <h3>Tulip Hybrid Mattress</h3>
+                    <p>7-layer orthopedic construction. Pocket springs + memory foam + cooling gel. Medium-firm for back support. Available in all Singapore bed sizes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌡️</div>
+                    <h3>Climate Optimised</h3>
+                    <p>Breathable 4D Air Fiber top layer. Heat dissipation for Singapore's 30°C nights. No overheating, no night sweats.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏥</div>
+                    <h3>Medical-Grade Safety</h3>
+                    <p>CertiPUR-US certified foam. No harmful chemicals. Hypoallergenic materials. Safe for asthma and sensitive skin.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Accessible Pricing</h3>
+                    <p>$800-$1,500 range. Direct-to-consumer model. Orthopedic quality without luxury markups. 0% instalment plans available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="container">
+            <div class="testimonial-content">
+                <p class="quote">
+                    "After 15 years of waking up with lower back pain, I finally sleep through the night. The firmness is perfect for side sleepers with back issues."
+                </p>
+                <p class="author">— Sarah L., Singapore (Verified Purchase)</p>
+                <div class="rating">★★★★★</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <div class="trial-badge">100-Night Risk-Free Trial</div>
+            <h2>Try Owllight at Home</h2>
+            <p style="font-size: 20px; color: var(--indigo); margin-bottom: 48px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Sleep on it for 100 nights. If your back pain doesn't improve, we'll collect it for free. No questions asked.
+            </p>
+            <a href="#" class="cta-primary">Shop Tulip Mattress</a>
+            <p class="hero-note" style="margin-top: 32px;">
+                Free delivery · Free returns · Visit our Sin Ming Lane showroom
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Owllight</div>
+                <ul class="footer-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Showroom</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <p style="text-align: center; font-size: 13px; opacity: 0.5; margin-top: 40px;">
+                &copy; 2026 Owllight Sleep. Singapore's back care mattress brand.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

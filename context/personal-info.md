@@ -13,7 +13,7 @@
 
 ## Your Role
 
-Founder and builder of Google Antigravity — an AI dev shop being positioned for AI consultants. By trade, you're a marketer who works inside a service-based business. You are non-technical but highly capable: you've shipped a web app, built AI agents for your own company, and implemented automation systems for friends' businesses.
+Founder and builder of RightClick:AI — an AI dev shop being positioned for AI consultants. By trade, you're a marketer who works inside a service-based business. You are non-technical but highly capable: you've shipped a web app, built AI agents for your own company, and implemented automation systems for friends' businesses.
 
 You operate across multiple modes simultaneously — strategist, content creator, systems builder, operator — which you've identified as a personal bottleneck you're actively solving with AI workflows.
 

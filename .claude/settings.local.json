@@ -1,10 +1,20 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cp:*)",
-      "Bash(mkdir:*)",
-      "Bash(do:*)",
-      "Bash(python:*)"
-    ]
+      "SlashCommand(/prime)",
+      "Bash(python scripts/scrape-images.py)",
+      "Bash(python -c \"\nimport requests\nfrom bs4 import BeautifulSoup\nimport json\n\n# Try different URLs for Owllight\nurls = [\n    ''https://owllight-sleep.com'',\n    ''https://www.owllight-sleep.com'',\n    ''https://owllight-sleep.com/products/tulip-hybrid-mattress-singapore'',\n]\n\nfor url in urls:\n    try:\n        headers = {\n            ''User-Agent'': ''Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'',\n            ''Accept'': ''text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'',\n            ''Accept-Language'': ''en-US,en;q=0.5'',\n        }\n        response = requests.get(url, headers=headers, timeout=10)\n        print(f''{url}: {response.status_code}'')\n        if response.status_code == 200:\n            soup = BeautifulSoup(response.text, ''html.parser'')\n            images = []\n            for img in soup.find_all(''img'')[:20]:\n                src = img.get(''src'') or img.get(''data-src'')\n                if src and ''http'' in src:\n                    images.append(src)\n            print(f''Found {len(images)} images'')\n            for img in images[:5]:\n                print(f''  - {img}'')\n            break\n    except Exception as e:\n        print(f''{url}: Error - {e}'')\n\")",
+      "Bash(curl -s https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/SKILL.md)",
+      "Bash(curl -s https://api.github.com/repos/nextlevelbuilder/ui-ux-pro-max-skill)",
+      "Bash(curl -s https://api.github.com/repos/nextlevelbuilder/ui-ux-pro-max-skill/contents)",
+      "Bash(curl -s https://api.github.com/repos/nextlevelbuilder/ui-ux-pro-max-skill/contents/.claude/skills)",
+      "Bash(curl -s https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/README.md)",
+      "Bash(curl -s https://api.github.com/repos/nextlevelbuilder/ui-ux-pro-max-skill/contents/.claude/skills/ui-ux-pro-max)",
+      "Bash(curl -s https://api.github.com/repos/nextlevelbuilder/ui-ux-pro-max-skill/git/trees/main?recursive=1)",
+      "Bash(python -m json.tool)",
+      "Bash(curl -s https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/ui-ux-pro-max/SKILL.md)"
+    ],
+    "deny": [],
+    "ask": []
   }
 }
